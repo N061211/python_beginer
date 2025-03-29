@@ -18,7 +18,13 @@ def reload_ammo(current_ammo: str, total_reserve_ammo: int, magazine_capacity: i
     模擬補彈過程，回傳補彈後的 (current_ammo, total_reserve_ammo)
     """
     # 實作邏輯...
+    missing = magazine_capacity - current_ammo
+    bullets_to_reload = min(missing, total_reserve_ammo)
     
+    current_ammo += bullets_to_reload
+    total_reserve_ammo -= bullets_to_reload
+
+    return current_ammo, total_reserve_ammo
 
 
 # 測試案例 1
