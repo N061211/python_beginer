@@ -42,5 +42,3 @@ result = reload_ammo(3, 2, 10)
 assert result == (5, 0), f"Test 3 Failed: got {result}, expected (5, 0)"
 print("✅ Test 3 Passed")
 
-
-# test
